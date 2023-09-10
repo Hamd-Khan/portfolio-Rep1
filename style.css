@@ -1,0 +1,327 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+
+}
+:root{
+  --default: #121213;
+  --empty: #3a3a3c;
+  --wrong:#b59f3b;
+  --right:#538d4e;
+}
+
+#game-main{
+  width:100%;
+  height:100%;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:white;
+}
+
+html,body{
+  height: 100%;
+  
+
+}
+
+/* #maincont{
+  display:flex;
+  background-color: white;
+  height:100%;
+  align-items: center;
+  flex-direction: column;
+} */
+#header{
+  display: flex;
+  /* background-color: white; */
+  height:80px;
+  align-items: center;
+
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#title-word{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left:190px;
+}
+
+.symbol-cont{
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: flex-end;
+  height:100%;
+}
+
+.symbol-cont > div {
+  padding-right: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+#question-symbol{
+  padding:27px;
+}
+#moon-symbol{
+  padding:23px;
+}
+#instruc-symbol{
+  padding:24px;
+  margin-right:-10px;
+}
+
+#moon-symbol:hover,
+#question-symbol:hover,
+#instruc-symbol:hover {
+  background-color: lightgray;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#game{
+  display:grid;
+  place-items:center;
+  width:100%;
+  height:600px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(4,auto);
+  grid-template-rows: repeat(4,auto);
+  margin-top:-400px;
+  margin-right:0px;
+}
+
+
+.cell{
+
+  width: 70px;
+  height:70px;
+  border:1px solid grey;
+  margin:1px;
+  color:black;
+  display:grid;
+  place-items:center;
+  text-transform: uppercase;
+  font-size:2rem;
+
+}
+
+.cell.right{
+background:var(--right);
+}
+.cell.wrong{
+  background:var(--wrong);
+}
+.cell.empty{
+  background:var(--empty);
+
+}
+
+#start-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:15px;
+  margin-top:-200px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.green-button {
+  background-color: rgb(80, 158, 80);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#green-button:hover{
+  color: darkgreen;
+  cursor:pointer;
+
+}
+
+#message-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:100px;
+
+  text-align: center;
+  
+ 
+}
+#win{
+  display:none;
+  background-color: white;
+  margin-top: 50px;
+  padding-top:10px;
+  padding-bottom:10px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; 
+
+
+}
+
+.dark-mode #win{
+  display:none;
+  background-color: black;
+  padding-top:10px;
+  margin-top: 50px;
+  padding-bottom:10px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+#lose{
+  display:none;
+  padding-top:10px;
+  padding-bottom:10px;
+  background-color: rgb(142, 69, 69);
+  width:100%;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#error{
+  display:none;
+  background-color: rgb(142, 69, 69);
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+#hint{
+  display:none;
+  background-color:tan;
+  padding-top:10px;
+  padding-bottom:10px;
+  width:100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+body.dark-mode{
+  background-color: black;
+  color:white;
+}
+
+.dark-mode #message-cont div{
+  color:white;
+}
+
+.dark-mode .cell{
+color:white;
+}
+/* .instructions{
+  display:flex;
+} */
+
+#instructions{
+  display:none;
+  position: absolute;
+  font-size: 1.0em;
+  top: 18%;
+  right: 3%;
+  width: 30%;
+  height: 60%;
+  border-left:1px solid black;
+  margin-left:5px;
+  padding-left:25px;
+ 
+ }
+ 
+ #instructions ul{
+  line-height: 2.0em;
+  max-height: 200px;
+ }
+ .dark-mode #instructions{
+  border-left:1px solid white;
+ }
+
+
+ .foot{
+  text-align: center;
+ }
+
+
+ #current-key{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    background-color: #656565;
+    color: white;
+    border: 2px solid black;
+    padding-left: 4px;
+    border-radius: 15%;
+    font-size: 3.0em;
+    margin-left:10px;
+    margin-top:190px;
+    margin-bottom:80px;
+  }
+
+
+ .key-cont{
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 10px;  
+  margin: 0 auto;
+  margin-top:100px;
+}
+
+
+#start-buttonres{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top:15px;
+  margin-top:-200px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+.green-buttonres{
+  background-color: rgb(80, 158, 80);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top:150px;
+  border: none;
+  cursor: pointer;
+}
+
+#green-buttonres:hover{
+  color: darkgreen;
+  cursor:pointer;
+
+}

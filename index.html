@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <div id="main-cont">
+      <div id="game-main">
+        <header id = "header">
+          <h1 id ="title-word">Wordle </h1>
+          <div class = "symbol-cont">
+
+            <div id="moon-symbol"><p>&#9681;</p></div>
+            <div id = "question-symbol"><p>&#63;</p></div>
+            <div id = "instruc-symbol"><p>&#9432;</p></div>
+
+          
+          </div>
+        </div>
+        </header>
+        <hr>
+        <div id="game">
+          <div id="grid-cont">
+          <div class="grid" id="winner-use">
+
+          </div>
+          </div>
+        </div>
+
+          <div id = "instructions", class ="instrc"> 
+            <h1>How To Play</h1>
+            <br>
+            <ul>
+            <li>Start typing. The letters will appear in the boxes</li>
+            <li>Remove letters with Backspace</li>
+            <li>Hit Enter/Return to submit an answer</li>
+            <li>Letters with green background are in the right spot</li>
+            <li>Letters with yellow background exist in the word, but are in the wrong spots</li>
+            <li>Letters with gray background do not exist in the word</li>
+            <li>If you need a hint, click the ? icon</li>
+          </ul>
+        
+  </div>
+          <div class= "button-cont">
+            <div id="start-button">
+              <button class="green-button" id="greener">Start Over</button>
+            </div>
+            </div>
+            <div class="key-cont">
+            <div id="current-key"></div>
+          </div>
+            
+    
+
+          
+        
+          <div id="message-cont">
+            <div id ="win">
+            <div>
+              <img src="https://res.cloudinary.com/mkf/image/upload/v1675467141/ENSF-381/labs/congrats_fkscna.gif">
+              <div class= "button-contres">
+                <div id="start-buttonres">
+                  <div class="green-buttonres">Start Over</div>
+                </div>
+            </div>
+            </div>
+            </div>
+            <div id = "lose">Sorry You Lose
+            </div>
+            <div id = "error">Please Enter your Guess</div>
+            <div id ="hint">Hint:</div>
+          </div>
+        </div>
+      
+
+
+    <script src="./wordle.js"></script>
+  </body>
+  <hr>
+  <div class="foot">
+    <p>&copy Hamd Khan</p>
+  </div>
+</html>
